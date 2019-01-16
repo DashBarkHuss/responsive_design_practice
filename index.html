@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+<style>
+
+    div{
+        border: 1px solid rgb(19, 126, 19);
+    }
+    html, body{
+        height: 100%;
+    }
+    #container{
+        display: grid;
+         
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 20px;
+        height: 100%;    
+        }
+    #container >*{
+        grid-column: 1/span 12;
+    }
+    @media (min-width:600px){
+        #two {
+            grid-column: 1/ span 3;
+
+        }
+        #three {
+            grid-row: 2;
+            grid-column: 1/span 3;
+        }
+        #four{
+            grid-area: 2/4/4/10;
+        }
+        #five{
+            grid-row: 2/4;
+            grid-column: 10/13;
+            
+        }
+        #six{
+            height: 100px;
+
+        }
+    }
+
+}
+</style>
+    </head>
+    <body>
+<div id="container">
+    <div id="one">one</div>
+    <div id="two">two</div>
+    <div id="three">three</div>
+    <div id="four">four</div>
+    <div id="five">five</div>
+    <div id="six">six</div>
+</div>
+    </body>
+</html>
